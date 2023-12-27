@@ -1,0 +1,26 @@
+<table class="table custom-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>name</th>
+      <th>owner</th>
+      <th>stadium</th>
+      <th>foundation</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ets of teamsTab">
+      <td>{{ets.id}}</td>
+      <td>{{ets.name}}</td>
+      <td>{{ets.owner}}</td>
+      <td>{{ets.stadium}}</td>
+      <td>{{ets.foundation}}</td>
+      <td>
+        <button class="btn btn-success" (click)="goToDisplayTeamTab(elt.id)">Display</button>
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

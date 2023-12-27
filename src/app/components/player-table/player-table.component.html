@@ -1,0 +1,24 @@
+<table class="table custom-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Birthday</th>
+        <th>Poste</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elt of playerTab">
+        <td>{{elt.id}}</td>
+        <td>{{elt.fullName}}</td>
+        <td>{{elt.birthday}}</td>
+        <td>{{elt.poste}}</td>
+        <td>
+          <button class="btn btn-success" (click)="goToDisplayPlayerTab(elt.id)">Display</button>
+          <button class="btn btn-warning">Edit</button>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

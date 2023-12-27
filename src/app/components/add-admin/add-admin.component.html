@@ -1,0 +1,44 @@
+<!-- image -->
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-9 mx-auto text-center">
+        <h1 class="text-white">Admin</h1>
+        <!-- pipe date -->
+        <h3>{{actualDate | date : "dd/MM/yyyy hh:mm"}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- tabs head -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+      aria-selected="true">Matches</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+      aria-selected="false">Teams</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+      aria-selected="false">players</a>
+  </li>
+</ul>
+
+<!-- dashboard des tabs -->
+<div class="tab-content" id="myTabContent">
+  <!-- tab 1 matches -->
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <app-matches-table></app-matches-table>
+  </div>
+  <!-- tab 2 teams -->
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <app-team-table></app-team-table>
+  </div>
+  <!-- tab 3 players -->
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <app-player-table></app-player-table>
+  </div>
+</div>
